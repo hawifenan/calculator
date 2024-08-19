@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #2c3e50; /* Darker background for contrast */
+    font-family: 'Arial', sans-serif; /* Change to a different font */
+    margin: 0;
+    overflow: hidden;
+}
+
+.calculator {
+    background: #34495e; /* New background color */
+    padding: 20px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    max-width: 400px;
+    width: 100%;
+}
+
+.calculator-screen {
+    background: #1b1b1b; /* Darker screen background */
+    color: #ecf0f1; /* Lighter text color */
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    background: #2c3e50; /* Darker button background */
+    border-radius: 15px;
+    color: #ecf0f1; /* Lighter text color */
+    font-size: 1.6rem;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.key:hover {
+    background: #3b4f63; /* Lighter background on hover */
+}
+
+.key:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    background: #e74c3c; /* Bright red for operators */
+}
+
+.equal-sign {
+    background: #27ae60; /* Green for the equal sign */
+    grid-column: span 2;
+}
+
+.all-clear {
+    background: #f1c40f; /* Bright yellow for the clear button */
+    grid-column: span 2;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="calculator">
+        <div class="calculator-screen" id="screen"></div>
+
+        <div class="calculator-keys">
+            <button type="button" class="key operator" value="+">+</button>
+            <button type="button" class="key operator" value="-">-</button>
+            <button type="button" class="key operator" value="*">&times;</button>
+            <button type="button" class="key operator" value="/">&divide;</button>
+
+            <button type="button" class="key" value="7">7</button>
+            <button type="button" class="key" value="8">8</button>
+            <button type="button" class="key" value="9">9</button>
+
+            <button type="button" class="key" value="4">4</button>
+            <button type="button" class="key" value="5">5</button>
+            <button type="button" class="key" value="6">6</button>
+
+            <button type="button" class="key" value="1">1</button>
+            <button type="button" class="key" value="2">2</button>
+            <button type="button" class="key" value="3">3</button>
+
+            <button type="button" class="key" value="0">0</button>
+            <button type="button" class="key" value=".">.</button>
+            <button type="button" class="key equal-sign" value="=">=</button>
+            <button type="button" class="key all-clear" value="all-clear">AC</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
